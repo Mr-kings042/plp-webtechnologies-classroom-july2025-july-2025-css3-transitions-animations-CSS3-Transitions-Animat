@@ -1,0 +1,76 @@
+/* === Base styles === */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f2f2f2;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* === Part 1: Button hover effects with transition === */
+.hover-button {
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hover-button:hover {
+  background: #3700b3;
+  transform: scale(1.1);
+}
+
+/* === Box styling === */
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ff5722;
+  margin: 40px auto;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.5s ease; /* smooth transform if changed directly */
+}
+
+/* === Part 1: Keyframes for continuous animation === */
+@keyframes rotateFade {
+  0%   { transform: rotate(0deg);   opacity: 1; }
+  50%  { transform: rotate(180deg); opacity: 0.5; }
+  100% { transform: rotate(360deg); opacity: 1; }
+}
+
+/* Class to trigger the keyframe animation */
+.animate {
+  animation: rotateFade 2s forwards;
+}
+
+/* Start/stop slide-in effect */
+.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-200px); opacity: 0; }
+  to   { transform: translateY(0);      opacity: 1; }
+}
+
+/* Trigger button */
+.trigger-button {
+  background: #009688;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.trigger-button:hover {
+  background: #00695c;
+}
